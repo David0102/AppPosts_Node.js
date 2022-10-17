@@ -1,7 +1,6 @@
 <div class="bg-light p-5 rounded-lg m-3">
     <h1 class="display-4">Bem-vindo ao blog do Node</h1>
-    <p class="lead">No Blog do Node você poderá criar categorias de postagens e logo em seguida, criar a postagem que
-        dejejar.</p>
+    <p class="lead">Blog de postagens.</p>
     <hr class="my-4">
     <p>Cadastre-se e comece a utilizar nossos serviços.</p>
     <a class="btn btn-primary btn-lg" href="#" role="button">Crie uma conta</a>
@@ -12,12 +11,17 @@
 <h2>Postagens recentes: </h2>
 
 {{#each postagem}}
-<div class="card mt-2">
+<div class="card mt-4">
     <div class="card-body">
         <h3>{{titulo}}</h3>
         <p>{{descricao}}</p>
+        <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+        <hr>
+        <small>{{categoria.nome}}</small>
+        <br>
+        <small>Data de criação: {{data}}</small>
     </div>
 </div>
 {{else}}
-<h5>Nenhuma postagem</h5>
+<h5>Nenhuma postagem registrada.</h5>
 {{/each}}

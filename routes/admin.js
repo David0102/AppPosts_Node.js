@@ -197,7 +197,7 @@ router.post('/postagens/edit', (req, res) => {
         Postagem.findOne({ _id: req.body.id }).then((postagem) => {
             postagem.titulo = req.body.titulo
             postagem.slug = req.body.slug
-            postagem.descricao = req.body.titulo
+            postagem.descricao = req.body.descricao
             postagem.conteudo = req.body.conteudo
             postagem.categoria = req.body.categoria
 
