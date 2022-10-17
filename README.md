@@ -1,1 +1,1 @@
-## Ferramenta de postagens utilizando Node.js.
+## Ferramenta de postagens utilizando Node.js + Express + MongoDB.
