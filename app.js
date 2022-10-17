@@ -3,6 +3,7 @@ const express = require("express")
 const handlebars = require("express-handlebars")
 const bodyParser = require("body-parser")
 const app = express()
+const user = require("./routes/usuario")
 const admin = require("./routes/admin")
 const path = require("path")
 const mongoose = require("mongoose")
@@ -105,6 +106,7 @@ app.get('/404', (req, res) => {
 })
 
 app.use('/admin', admin)
+app.use('/usuarios', user)
 
 //Outros
 const PORT = 8081
