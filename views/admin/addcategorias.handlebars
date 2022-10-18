@@ -3,8 +3,8 @@
 {{else}}
 
 {{/each}}
-<h2>Nova categoria: </h2>
-<div class="card">
+<h2>Nova categoria</h2>
+<div class="card bg-light shadow p-2 mb-3 bg-body rounded bg-gradient mt-3">
     <div class="card-body">
         <form action="/admin/categorias/nova" method="POST">
             <label for="nome">Nome: </label>
@@ -12,7 +12,9 @@
             <label for="slug" class="mt-2">Slug: </label>
             <input type="text" id="slug" name="slug" placeholder="Slug da categoria" class="form-control mt-1">
             <br>
-            <button type="submit" class="btn btn-success">Criar categoria</button>
+            <div class="d-grid gap-2">
+                <button class="btn btn-success" type="submit">Criar categoria</button>
+            </div>
         </form>
     </div>
 </div>

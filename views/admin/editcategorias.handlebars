@@ -3,8 +3,8 @@
 {{else}}
 
 {{/each}}
-<h2>Editar categoria: </h2>
-<div class="card">
+<h2>Editar categoria</h2>
+<div class="card bg-light shadow p-2 mb-3 bg-body rounded bg-gradient mt-3">
     <div class="card-body">
         <form action="/admin/categorias/edit" method="POST">
             <input type="hidden" name="id" value="{{categoria._id}}">
@@ -15,7 +15,9 @@
             <input type="text" id="slug" name="slug" placeholder="Slug da categoria" class="form-control mt-1"
                 value="{{categoria.slug}}">
             <br>
-            <button type="submit" class="btn btn-success">Editar categoria</button>
+            <div class="d-grid gap-2">
+                <button class="btn btn-success" type="submit">Editar categoria</button>
+            </div>
         </form>
     </div>
 </div>

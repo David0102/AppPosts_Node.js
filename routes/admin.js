@@ -109,8 +109,8 @@ router.post("/categorias/edit", eAdmin, (req, res) => {
     }
 })
 
-router.post("/categorias/deletar", eAdmin, (req, res) => {
-    Categoria.remove({ _id: req.body.id }).then(() => {
+router.get("/categorias/deletar/:id", eAdmin, (req, res) => {
+    Categoria.remove({ _id: req.params.id }).then(() => {
         req.flash("success_msg", "Categoria deletada com sucesso!")
         res.redirect("/admin/categorias")
     }).catch((erro) => {
