@@ -15,7 +15,7 @@ require("./models/Categoria")
 const Categoria = mongoose.model("categorias")
 const passport = require("passport")
 require("./config/auth")(passport)
-const db = require("./config/db")
+//const db = require("./config/db")
 
 //Configurações
 //Session
