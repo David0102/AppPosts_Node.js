@@ -48,7 +48,7 @@ app.set('view engine', 'handlebars')
 
 //mongoose
 mongoose.Promise = global.Promise
-mongoose.connect("mongodb://mongo:QYK1zQd467xo7XSi6SoE@containers-us-west-100.railway.app:6715").then(() => {
+mongoose.connect("mongodb://localhost/blogapp").then(() => {
     console.log("mongoDB conectado...")
 }).catch((erro) => {
     console.log("Erro ao se conectar ao mongoDB: " + erro)
